@@ -19,11 +19,10 @@ public class Prenda {
 	private Integer cantidadXG;
 	private Integer codigo;
 	
-	public Prenda(String nombre, Double precioCompra, Integer cantidadCH, Integer cantidadM, Integer cantidadG, Integer cantidadXG) {
+	public Prenda(Double precioCompra, Integer cantidadCH, Integer cantidadM, Integer cantidadG, Integer cantidadXG) {
 		
 		Random random = new Random();
 		this.codigo = random.nextInt(999)+1000;
-		this.nombre = nombre;
 		this.precioCompra = precioCompra;
 		this.cantidadCH = cantidadCH;
 		this.cantidadM = cantidadM;
