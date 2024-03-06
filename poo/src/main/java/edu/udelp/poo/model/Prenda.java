@@ -28,10 +28,10 @@ public class Prenda {
 		this.cantidadM = cantidadM;
 		this.cantidadG = cantidadG;
 		this.cantidadXG = cantidadXG;
-		this.precioCH *= 1.1;
-		this.precioM *= 1.1;
-		this.precioG *= 1.2;
-		this.precioXG *= 1.2;
+		this.precioCH = precioCompra * 1.1;
+		this.precioM = precioCompra * 1.1;
+		this.precioG = precioCompra * 1.2;
+		this.precioXG = precioCompra * 1.2;
 	}
 	
 	public void anadir(Integer cantidadCH, Integer cantidadM, Integer cantidadG, Integer cantidadXG) {
@@ -46,7 +46,7 @@ public class Prenda {
 		return "Prenda [nombre=" + ((nombre==null)?"":nombre) + ", precioCompra=" + ((precioCompra==null)?"":precioCompra) + ", precioCH=" + ((precioCH==null)?"":precioCH) + ", precioM="
 				+ ((precioM==null)?"":precioM) + ", precioG=" + ((precioG==null)?"":precioG) + ", precioXG=" + ((precioXG==null)?"":precioXG) + ", cantidadCH=" + ((cantidadCH==null)?"":cantidadCH)
 				+ ", cantidadM=" + ((cantidadM==null)?"":cantidadM) + ", cantidadG=" + ((cantidadG==null)?"":cantidadG) + ", cantidadXG=" + ((cantidadXG==null)?"":cantidadXG) + ", codigo="
-				+ ((codigo==null)?"":codigo) + "]";
+				+ ((codigo==null)?"":codigo) + "]\n";
 		
 	}
 	

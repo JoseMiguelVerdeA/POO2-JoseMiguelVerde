@@ -45,6 +45,8 @@ public class PrendasHombre {
 				return;
 			}
 			break;
+		default:
+			System.out.println("Opcion invalida.");
 		}
 		System.out.println("La prenda no pude ser dada de alta ya que esta ya existe.");
 	}
@@ -85,7 +87,7 @@ public class PrendasHombre {
 			if(null != pantalonesVestir) {
 				pantalonesVestir.setPrecioCompra(precio);
 				return;}
-
+			
 
 		case 2:
 			if(null != pantalonesMezclilla) {
@@ -115,31 +117,36 @@ public class PrendasHombre {
 			if(null != pantalonesVestir) {
 				switch(talla) {
 				case 1:
-
-					pantalonesVestir.setCantidadCH(pantalonesVestir.getCantidadCH() - 1);
-					ventas.add(pantalonesVestir.getNombre() + "\t|\t" + "CH\t|\t1" + pantalonesVestir.getPrecioCompra() + "\t|\t" + pantalonesVestir.getPrecioCH());
-					return pantalonesVestir.getPrecioCH();
-
+					if(pantalonesVestir!=null && pantalonesVestir.getCantidadCH()>=1) {
+						pantalonesVestir.setCantidadCH(pantalonesVestir.getCantidadCH() - 1);
+						ventas.add(pantalonesVestir.getNombre() + "\t|\t" + "CH\t|\t1" + pantalonesVestir.getPrecioCompra() + "\t|\t" + pantalonesVestir.getPrecioCH());
+						return pantalonesVestir.getPrecioCH();
+					}
+					break;
 
 				case 2:
-
-					pantalonesVestir.setCantidadM(pantalonesVestir.getCantidadM() - 1);
-					ventas.add(pantalonesVestir.getNombre() + "\t|\t" + "M\t|\t1" + pantalonesVestir.getPrecioCompra() + "\t|\t" + pantalonesVestir.getPrecioM());
-					return pantalonesVestir.getPrecioM();
-
+					if(pantalonesVestir!=null && pantalonesVestir.getCantidadM()>=1) {
+						pantalonesVestir.setCantidadM(pantalonesVestir.getCantidadM() - 1);
+						ventas.add(pantalonesVestir.getNombre() + "\t|\t" + "M\t|\t1" + pantalonesVestir.getPrecioCompra() + "\t|\t" + pantalonesVestir.getPrecioM());
+						return pantalonesVestir.getPrecioM();
+					}
+					break;
 
 				case 3:
-
-					pantalonesVestir.setCantidadG(pantalonesVestir.getCantidadG() - 1);
-					ventas.add(pantalonesVestir.getNombre() + "\t|\t" + "G\t|\t1" + pantalonesVestir.getPrecioCompra() + "\t|\t" + pantalonesVestir.getPrecioG());
-					return pantalonesVestir.getPrecioG();
-
+					if(pantalonesVestir!=null && pantalonesVestir.getCantidadG()>=1) {
+						pantalonesVestir.setCantidadG(pantalonesVestir.getCantidadG() - 1);
+						ventas.add(pantalonesVestir.getNombre() + "\t|\t" + "G\t|\t1" + pantalonesVestir.getPrecioCompra() + "\t|\t" + pantalonesVestir.getPrecioG());
+						return pantalonesVestir.getPrecioG();
+					}
+					break;
 
 				case 4:
-
-					pantalonesVestir.setCantidadXG(pantalonesVestir.getCantidadXG() - 1);
-					ventas.add(pantalonesVestir.getNombre() + "\t|\t" + "XG\t|\t1" + pantalonesVestir.getPrecioCompra() + "\t|\t" + pantalonesVestir.getPrecioXG());
-					return pantalonesVestir.getPrecioXG();
+					if(pantalonesVestir!=null && pantalonesVestir.getCantidadXG()>=1) {
+						pantalonesVestir.setCantidadXG(pantalonesVestir.getCantidadXG() - 1);
+						ventas.add(pantalonesVestir.getNombre() + "\t|\t" + "XG\t|\t1" + pantalonesVestir.getPrecioCompra() + "\t|\t" + pantalonesVestir.getPrecioXG());
+						return pantalonesVestir.getPrecioXG();
+					}
+					break;
 				}
 			}
 
@@ -148,31 +155,39 @@ public class PrendasHombre {
 			if(null != pantalonesMezclilla) {
 				switch(talla) {
 				case 1:
-
-					pantalonesMezclilla.setCantidadCH(pantalonesMezclilla.getCantidadCH() - 1);
-					ventas.add(pantalonesMezclilla.getNombre() + "\t|\t" + "CH\t|\t1" + pantalonesMezclilla.getPrecioCompra() + "\t|\t" + pantalonesMezclilla.getPrecioCH());
-					return pantalonesMezclilla.getPrecioCH();
+					if(pantalonesMezclilla!=null && pantalonesMezclilla.getCantidadCH()>=1) {
+						pantalonesMezclilla.setCantidadCH(pantalonesMezclilla.getCantidadCH() - 1);
+						ventas.add(pantalonesMezclilla.getNombre() + "\t|\t" + "CH\t|\t1" + pantalonesMezclilla.getPrecioCompra() + "\t|\t" + pantalonesMezclilla.getPrecioCH());
+						return pantalonesMezclilla.getPrecioCH();
+					}
+					break;
 
 
 				case 2:
-
-					pantalonesMezclilla.setCantidadM(pantalonesMezclilla.getCantidadM() - 1);
-					ventas.add(pantalonesMezclilla.getNombre() + "\t|\t" + "M\t|\t1" + pantalonesMezclilla.getPrecioCompra() + "\t|\t" + pantalonesMezclilla.getPrecioM());
-					return pantalonesMezclilla.getPrecioM();
+					if(pantalonesMezclilla!=null && pantalonesMezclilla.getCantidadM()>=1) {
+						pantalonesMezclilla.setCantidadM(pantalonesMezclilla.getCantidadM() - 1);
+						ventas.add(pantalonesMezclilla.getNombre() + "\t|\t" + "M\t|\t1" + pantalonesMezclilla.getPrecioCompra() + "\t|\t" + pantalonesMezclilla.getPrecioM());
+						return pantalonesMezclilla.getPrecioM();
+					}
+					break;
 
 
 				case 3:
-
-					pantalonesMezclilla.setCantidadG(pantalonesMezclilla.getCantidadG() - 1);
-					ventas.add(pantalonesMezclilla.getNombre() + "\t|\t" + "G\t|\t1" + pantalonesMezclilla.getPrecioCompra() + "\t|\t" + pantalonesMezclilla.getPrecioG());
-					return pantalonesMezclilla.getPrecioG();
+					if(pantalonesMezclilla!=null && pantalonesMezclilla.getCantidadG()>=1) {
+						pantalonesMezclilla.setCantidadG(pantalonesMezclilla.getCantidadG() - 1);
+						ventas.add(pantalonesMezclilla.getNombre() + "\t|\t" + "G\t|\t1" + pantalonesMezclilla.getPrecioCompra() + "\t|\t" + pantalonesMezclilla.getPrecioG());
+						return pantalonesMezclilla.getPrecioG();
+					}
+					break;
 
 
 				case 4:
-
-					pantalonesMezclilla.setCantidadXG(pantalonesMezclilla.getCantidadXG() - 1);
-					ventas.add(pantalonesMezclilla.getNombre() + "\t|\t" + "XG\t|\t1" + pantalonesMezclilla.getPrecioCompra() + "\t|\t" + pantalonesMezclilla.getPrecioXG());
-					return pantalonesMezclilla.getPrecioXG();
+					if(pantalonesMezclilla!=null && pantalonesMezclilla.getCantidadXG()>=1) {
+						pantalonesMezclilla.setCantidadXG(pantalonesMezclilla.getCantidadXG() - 1);
+						ventas.add(pantalonesMezclilla.getNombre() + "\t|\t" + "XG\t|\t1" + pantalonesMezclilla.getPrecioCompra() + "\t|\t" + pantalonesMezclilla.getPrecioXG());
+						return pantalonesMezclilla.getPrecioXG();
+					}
+					break;
 				}
 			}
 
@@ -181,32 +196,38 @@ public class PrendasHombre {
 			if(null != camisas) {
 				switch(talla) {
 				case 1:
+					if(camisas!=null && camisas.getCantidadCH()>=1) {
+						camisas.setCantidadCH(camisas.getCantidadCH() - 1);
+						ventas.add(camisas.getNombre() + "\t|\t" + "CH\t|\t1" + camisas.getPrecioCompra() + "\t|\t" + camisas.getPrecioCH());
 
-					camisas.setCantidadCH(camisas.getCantidadCH() - 1);
-					ventas.add(camisas.getNombre() + "\t|\t" + "CH\t|\t1" + camisas.getPrecioCompra() + "\t|\t" + camisas.getPrecioCH());
-
-					return camisas.getPrecioCH();
+						return camisas.getPrecioCH();
+					}
+					break;
 
 
 				case 2:
-
-					camisas.setCantidadM(camisas.getCantidadM() - 1);
-					ventas.add(camisas.getNombre() + "\t|\t" + "M\t|\t1" + camisas.getPrecioCompra() + "\t|\t" + camisas.getPrecioM());
-					return camisas.getPrecioM();
-
+					if(camisas!=null && camisas.getCantidadM()>=1) {
+						camisas.setCantidadM(camisas.getCantidadM() - 1);
+						ventas.add(camisas.getNombre() + "\t|\t" + "M\t|\t1" + camisas.getPrecioCompra() + "\t|\t" + camisas.getPrecioM());
+						return camisas.getPrecioM();
+					}
+					break;
 
 				case 3:
-
-					camisas.setCantidadG(camisas.getCantidadG() - 1);
-					ventas.add(camisas.getNombre() + "\t|\t" + "G\t|\t1" + camisas.getPrecioCompra() + "\t|\t" + camisas.getPrecioG());
-					return camisas.getPrecioG();
-
+					if(camisas!=null && camisas.getCantidadG()>=1) {
+						camisas.setCantidadG(camisas.getCantidadG() - 1);
+						ventas.add(camisas.getNombre() + "\t|\t" + "G\t|\t1" + camisas.getPrecioCompra() + "\t|\t" + camisas.getPrecioG());
+						return camisas.getPrecioG();
+					}
+					break;
 
 				case 4:
-
-					camisas.setCantidadXG(camisas.getCantidadXG() - 1);
-					ventas.add(camisas.getNombre() + "\t|\t" + "XG\t|\t1" + camisas.getPrecioCompra() + "\t|\t" + camisas.getPrecioXG());
-					return camisas.getPrecioXG();
+					if(camisas!=null && camisas.getCantidadXG()>=1) {
+						camisas.setCantidadXG(camisas.getCantidadXG() - 1);
+						ventas.add(camisas.getNombre() + "\t|\t" + "XG\t|\t1" + camisas.getPrecioCompra() + "\t|\t" + camisas.getPrecioXG());
+						return camisas.getPrecioXG();
+					}
+					break;
 				}
 			}
 
@@ -216,30 +237,38 @@ public class PrendasHombre {
 				switch(talla) {
 				case 1:
 
-					playeras.setCantidadCH(playeras.getCantidadCH() - 1);
-					ventas.add(playeras.getNombre() + "\t|\t" + "CH\t|\t1" + playeras.getPrecioCompra() + "\t|\t" + playeras.getPrecioCH());
-					return playeras.getPrecioCH();
+					if(playeras!=null && playeras.getCantidadCH()>=1) {
+						playeras.setCantidadCH(playeras.getCantidadCH() - 1);
+						ventas.add(playeras.getNombre() + "\t|\t" + "CH\t|\t1" + playeras.getPrecioCompra() + "\t|\t" + playeras.getPrecioCH());
+						return playeras.getPrecioCH();
+					}
+					break;
 
 
 				case 2:
-
-					playeras.setCantidadM(playeras.getCantidadM() - 1);
-					ventas.add(playeras.getNombre() + "\t|\t" + "M\t|\t1" + playeras.getPrecioCompra() + "\t|\t" + playeras.getPrecioM());
-					return playeras.getPrecioM();
+					if(playeras!=null && playeras.getCantidadM()>=1) {
+						playeras.setCantidadM(playeras.getCantidadM() - 1);
+						ventas.add(playeras.getNombre() + "\t|\t" + "M\t|\t1" + playeras.getPrecioCompra() + "\t|\t" + playeras.getPrecioM());
+						return playeras.getPrecioM();
+					}
+					break;
 
 
 				case 3:
-
-					playeras.setCantidadG(playeras.getCantidadG() - 1);
-					ventas.add(playeras.getNombre() + "\t|\t" + "G\t|\t1" + playeras.getPrecioCompra() + "\t|\t" + playeras.getPrecioG());
-					return playeras.getPrecioG();
-
+					if(playeras!=null && playeras.getCantidadG()>=1) {
+						playeras.setCantidadG(playeras.getCantidadG() - 1);
+						ventas.add(playeras.getNombre() + "\t|\t" + "G\t|\t1" + playeras.getPrecioCompra() + "\t|\t" + playeras.getPrecioG());
+						return playeras.getPrecioG();
+					}
+					break;
 
 				case 4:
-
-					playeras.setCantidadXG(playeras.getCantidadXG() - 1);
-					ventas.add(playeras.getNombre() + "\t|\t" + "XG\t|\t1" + playeras.getPrecioCompra() + "\t|\t" + playeras.getPrecioXG());
-					return playeras.getPrecioXG();
+					if(playeras!=null && playeras.getCantidadXG()>=1) {
+						playeras.setCantidadXG(playeras.getCantidadXG() - 1);
+						ventas.add(playeras.getNombre() + "\t|\t" + "XG\t|\t1" + playeras.getPrecioCompra() + "\t|\t" + playeras.getPrecioXG());
+						return playeras.getPrecioXG();
+					}
+					break;
 				}
 
 
@@ -250,7 +279,7 @@ public class PrendasHombre {
 
 
 	public String tPrendas() {
-		return pantalonesVestir.toString() +"\n"+ pantalonesMezclilla +"\n"+ camisas +"\n"+ playeras +"\n";
+		return pantalonesVestir +"\n"+ pantalonesMezclilla +"\n"+ camisas +"\n"+ playeras +"\n";
 	}
 
 
