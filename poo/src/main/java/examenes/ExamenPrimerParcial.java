@@ -7,7 +7,7 @@ import edu.udelp.poo.model.PrendasHombre;
 import edu.udelp.poo.model.PrendasMujer;
 import edu.udelp.poo.process.Validaciones;
 
-public class examenPrimerParcial {
+public class ExamenPrimerParcial {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
